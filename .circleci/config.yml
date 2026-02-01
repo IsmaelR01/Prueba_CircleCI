@@ -1,0 +1,13 @@
+version: 2.1
+
+jobs:
+  prueba_circleCI:
+    docker:
+      - image: cimg/base:stable
+    steps:
+      - checkout
+      - run: echo "CircleCI funcionando correctamente"
+workflows:
+  ejemplo_workflow:
+    jobs:
+      - prueba_circleCI
